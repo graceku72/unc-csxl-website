@@ -1,0 +1,26 @@
+
+
+.container {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.link-box {
+    height: 175px;
+    width: 175px;
+    background-color: transparent;
+    border: 1px solid #fafafa;
+    margin: 15px;
+    border-radius: 7px;
+}
+
+.xl-icon {
+    margin-bottom: 25px;
+}
