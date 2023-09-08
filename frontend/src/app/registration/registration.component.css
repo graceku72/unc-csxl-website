@@ -1,7 +1,52 @@
-.registration-box {
+.registration-container {
+    padding-bottom: 776px; 
+    background-color: black; 
+    border-radius: 16px; 
+    border: 2px solid #545F71; 
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+}
+
+.input-container {
     width: 613px; 
     height: 601px; 
     background-color: rgba(26, 44, 72, 0.64); 
     border-radius: 10px; 
-    border: 0.25px white solid
+    border: 0.25px solid #fafafa
+}
+
+.label-style {
+    width: 411px;
+    height: 38px; 
+    text-align: center; 
+    color: #FFF8F8; 
+    font-size: 25px; 
+    font-family: Apple Braille; 
+    font-weight: 400; 
+    line-height: 22px; 
+    word-wrap: break-word;
+}
+
+.textbox {
+    width: 533px;
+    height: 35px;
+    background: #D9D9D9;
+    border-radius: 5px;
+    border: none; 
+    padding: 5px; 
+}
+
+.button-style {
+    width: 191px; 
+    height: 48px; 
+    background-color: #545F71; 
+    border-radius: 10px;
+    text-align: center; 
+    color: #FFF8F8; 
+    font-size: 25px; 
+    font-family: Apple Braille; 
+    font-weight: 400; 
+    line-height: 22px; 
+    word-wrap: break-word
 }
