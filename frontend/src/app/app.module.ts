@@ -9,6 +9,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { StatsComponent } from './stats/stats.component';
+import { CheckinComponent } from './checkin/checkin.component';
+import { CheckinConfirmationComponent } from './checkin-confirmation/checkin-confirmation.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { StatsComponent } from './stats/stats.component';
     RegistrationComponent,
     ConfirmationComponent,
     StatsComponent,
+    CheckinComponent,
+    CheckinConfirmationComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { StatsComponent } from './stats/stats.component';
       {path: '', component: HomeComponent},
       {path: 'register', component: RegistrationComponent},
       {path: 'confirmation', component: ConfirmationComponent},
-      {path: 'stats',  component: StatsComponent},
+      {path: 'stats', component: StatsComponent},
+      {path: 'checkin', component: CheckinComponent},
+      {path: 'checkin-confirmation', component: CheckinConfirmationComponent},
     ]),
   ],
   providers: [],
