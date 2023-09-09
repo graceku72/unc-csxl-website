@@ -21,7 +21,7 @@ import { RegistrationComponent } from './registration/registration.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
-      {path: '/register', component: RegistrationComponent},
+      {path: 'register', component: RegistrationComponent},
     ]),
   ],
   providers: [],
