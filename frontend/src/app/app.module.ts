@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { RegistrationComponent } from './registration/registration.component';
     AppComponent,
     HomeComponent,
     RegistrationComponent,
+    ConfirmationComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { RegistrationComponent } from './registration/registration.component';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'register', component: RegistrationComponent},
+      {path: 'confirmation', component: ConfirmationComponent},
     ]),
   ],
   providers: [],

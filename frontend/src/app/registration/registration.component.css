@@ -1,11 +1,8 @@
 .registration-container {
-    padding-bottom: 776px; 
     background-color: black; 
-    border-radius: 16px; 
-    border: 2px solid #545F71; 
+    display: flex;
     justify-content: center; 
     align-items: center; 
-    display: inline-flex;
 }
 
 .input-container {
@@ -16,25 +13,37 @@
     border: 0.25px solid #fafafa
 }
 
-.label-style {
-    width: 411px;
-    height: 38px; 
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.title { 
     text-align: center; 
     color: #FFF8F8; 
+    font-size: 35px; 
+    font-weight: 400; 
+         
+}
+
+.label-style {
+    text-align: left;
+    color: #FFF8F8; 
     font-size: 25px; 
-    font-family: Apple Braille; 
     font-weight: 400; 
     line-height: 22px; 
     word-wrap: break-word;
+    padding-bottom: 20px;
 }
 
-.textbox {
+input {
     width: 533px;
     height: 35px;
     background: #D9D9D9;
     border-radius: 5px;
     border: none; 
-    padding: 5px; 
+    margin-bottom: 30px;
 }
 
 .button-style {
@@ -45,8 +54,7 @@
     text-align: center; 
     color: #FFF8F8; 
     font-size: 25px; 
-    font-family: Apple Braille; 
     font-weight: 400; 
-    line-height: 22px; 
-    word-wrap: break-word
+    align-self: center;
+    margin: 60px;
 }

@@ -1,12 +1,14 @@
 <div class="registration-container">
     <div class="input-container">
-        <div style="width: 411px; height: 38px; text-align: center; color: #FFF8F8; font-size: 35px; font-family: Apple Braille; font-weight: 400; line-height: 22px; word-wrap: break-word">Register</div>
-        <label for="first-name" class="label-style">First Name</label>
-        <input type="text" id="first-name" name="first-name">
-        <label for="last-name" class="label-style">Last Name</label>
-        <input type="text" id="last-name" name="last-name">
-        <label for="pid" class="label-style">PID</label>
-        <input type="number" id="pid" name="pid">
-        <button class="button-style">Register</button>
+        <h2 class="title">Register</h2>
+        <form>
+            <label for="first-name" class="label-style">First Name</label>
+            <input type="text" id="first-name" name="first-name">
+            <label for="last-name" class="label-style">Last Name</label>
+            <input type="text" id="last-name" name="last-name">
+            <label for="pid" class="label-style">PID</label>
+            <input type="number" id="pid" name="pid">
+            <button class="button-style" (click)="register()">Register</button>
+        </form>
     </div>
 </div>
