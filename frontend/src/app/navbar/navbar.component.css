@@ -1,0 +1,14 @@
+nav {
+    background-color: #1A2C48;
+    height: 80px;
+    padding: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 57px;
+    
+}

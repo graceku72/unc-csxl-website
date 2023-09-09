@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { StatsComponent } from './stats/stats.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { StatsComponent } from './stats/stats.component';
     RegistrationComponent,
     ConfirmationComponent,
     StatsComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
