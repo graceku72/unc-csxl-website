@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { StatsComponent } from './stats/stats.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     HomeComponent,
     RegistrationComponent,
     ConfirmationComponent,
+    StatsComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
       {path: '', component: HomeComponent},
       {path: 'register', component: RegistrationComponent},
       {path: 'confirmation', component: ConfirmationComponent},
+      {path: 'stats',  component: StatsComponent},
     ]),
   ],
   providers: [],
