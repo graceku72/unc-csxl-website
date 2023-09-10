@@ -1,0 +1,42 @@
+.confirmation-container {
+    background-color: black; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.msg-container {
+    width: 613px; 
+    height: 601px; 
+    background-color: rgba(26, 44, 72, 0.64); 
+    border-radius: 10px; 
+    border: 0.25px solid #fafafa;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-size: 23px; 
+    font-weight: 400;
+    flex-direction: column;
+}
+
+.checkmark {
+    width: 276px;
+    height: 276px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    filter: grayscale(100%) brightness(60%);
+}
+
+.button-style {
+    width: 191px; 
+    height: 48px; 
+    background-color: #545F71; 
+    border-radius: 10px;
+    text-align: center; 
+    color: #FFF8F8; 
+    font-size: 25px; 
+    font-weight: 400; 
+    align-self: center;
+    margin: 60px;
+}
