@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.stats-container {
+    width: 613px; 
+
+    background-color: rgba(26, 44, 72, 0.64); 
+    border-radius: 10px; 
+    border: 0.25px solid #fafafa;
+    justify-self: center;
+}
+
+table {
+    padding: 40px;
+    width: 100%;
+    
+}
+
+th, td {
+    text-align: left;
+}
+
+th {
+    background-color: #464545;
+}
+tr {
+    background-color: #5B5B5B;
+
+}
+
+tr:hover {
+    background-color: #ddd;
+}
