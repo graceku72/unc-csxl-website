@@ -19,8 +19,18 @@
     border: 1px solid #fafafa;
     margin: 15px;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.xl-icon {
-    margin-bottom: 25px;
+img {
+    height: 80px;
+
+}
+
+a {
+    text-decoration: none;
 }
