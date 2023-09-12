@@ -4,10 +4,13 @@
         <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
             <label for="firstName" class="label-style">First Name</label>
             <input type="text" id="firstName" name="firstName" formControlName="firstName">
+
             <label for="lastName" class="label-style">Last Name</label>
             <input type="text" id="lastName" name="lastName" formControlName="lastName">
+
             <label for="pid" class="label-style">PID</label>
-            <input type="text" id="pid" name="pid" formControlName="pid">
+            <input type="number" id="pid" name="pid" formControlName="pid">
+
             <button class="button-style" type="submit">Register</button>
         </form>
     </div>

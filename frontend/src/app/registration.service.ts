@@ -5,6 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RegistrationService {
+
+  constructor() {
+    
+  }
   firstName: string = '';
   lastName: string = '';
   pid: string = '';

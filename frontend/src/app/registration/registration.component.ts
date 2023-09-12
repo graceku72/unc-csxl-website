@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { RegistrationService } from '../registration.service';
 import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
+import { UserService } from '../user.service';
+import { last } from 'rxjs';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -14,23 +17,30 @@ export class RegistrationComponent {
   // pid = this.registrationService.getPid();
 
   checkoutForm = this.formBuilder.group({
-    firstName: '',
-    lastName: '',
-    pid: ''
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    pid: ['', Validators.required],
   });
+  
 
   constructor(
     private router: Router,
-    private registrationService : RegistrationService,
+    private userService : UserService,
     private formBuilder: FormBuilder,
   ) {}
 
   onSubmit(): void {
-    //const firstNameInput = this.checkoutForm.get('firstName').value;
-    // after fixing this, import and use init in the confirmation typescript file
-    //this.registrationService.setFirstName(firstNameInput);
-    //call clear service methods
-    this.checkoutForm.reset();
-    this.router.navigate(['/confirmation']);
+    const { firstName, lastName, pid } = this.checkoutForm.value;
+    //it would not let me make new user without this validation 
+    if (firstName !== null && firstName !== undefined &&
+      lastName !== null && lastName !== undefined &&
+      pid !== null && pid !== undefined) {
+      this.userService.register(firstName, lastName, parseInt(pid));
+
+      console.log(this.userService.getUser());
+      
+      this.router.navigate(['/confirmation']);
+    }
+    
   }
 }
