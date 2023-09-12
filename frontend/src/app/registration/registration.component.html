@@ -1,14 +1,14 @@
 <div class="registration-container">
     <div class="input-container">
         <h2>Register</h2>
-        <form>
-            <label for="first-name" class="label-style">First Name</label>
-            <input type="text" id="first-name" name="first-name">
-            <label for="last-name" class="label-style">Last Name</label>
-            <input type="text" id="last-name" name="last-name">
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <label for="firstName" class="label-style">First Name</label>
+            <input type="text" id="firstName" name="firstName" formControlName="firstName">
+            <label for="lastName" class="label-style">Last Name</label>
+            <input type="text" id="lastName" name="lastName" formControlName="lastName">
             <label for="pid" class="label-style">PID</label>
-            <input type="number" id="pid" name="pid">
-            <button class="button-style" (click)="register()">Register</button>
+            <input type="text" id="pid" name="pid" formControlName="pid">
+            <button class="button-style" type="submit">Register</button>
         </form>
     </div>
 </div>
