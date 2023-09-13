@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { dummyUsers } from '../dummy-data';
+import { UserService } from '../user.service';
+import { CheckInService } from '../check-in.service';
 
 @Component({
   selector: 'app-stats',
@@ -7,5 +9,18 @@ import { dummyUsers } from '../dummy-data';
   styleUrls: ['./stats.component.css']
 })
 export class StatsComponent {
-  users = dummyUsers;
+  constructor(
+    private userService: UserService,
+    private checkinService: CheckInService,
+  ) {
+
+  }
+
+  getUsers() {
+    return this.userService.getUsers();
+  }
+
+  getCheckins() {
+    return this.checkinService.getCheckins();
+  }
 }

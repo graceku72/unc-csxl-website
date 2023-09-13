@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
+import { CheckInService } from '../check-in.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-checkin',
@@ -7,11 +10,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./checkin.component.css']
 })
 export class CheckinComponent {
-  constructor(private router: Router) {
+  checkoutForm = this.formBuilder.group({
+    pid: []
+  });
+
+  constructor(
+    private router: Router,
+    private checkinService: CheckInService,
+    private userService: UserService,
+    private formBuilder: FormBuilder
+    
+    ) {
     
   }
 
-  checkin() {
-    this.router.navigate(['/checkin-confirmation']);
+  onSubmit() {
+    const pid = this.checkoutForm.value.pid;
+    console.log(pid);
+
+    if (pid !== null) {
+      const foundUser = this.userService.getUsers().find(user => user.getPid() === pid);
+      if (foundUser) {
+        this.checkinService.addCheckin(foundUser.getName());
+        this.router.navigate(['/checkin-confirmation']);
+      }
+    }
+  
+    
+
+    
   }
 }

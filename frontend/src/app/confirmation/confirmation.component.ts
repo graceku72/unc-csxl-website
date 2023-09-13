@@ -19,7 +19,7 @@ export class ConfirmationComponent {
   }
 
   getUserName() {
-    return this.userService.getUser()?.name;
+    return this.userService.getUser()?.getName();
   }
   // ngOnInit(): void {
   //   //const routeParams = this.route.snapshot.paramMap: const 

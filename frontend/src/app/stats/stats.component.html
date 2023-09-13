@@ -1,6 +1,6 @@
 <div class="container">
     <div class="stats-container">
-        <h2>Statistics</h2>
+        <h2>Users</h2>
 
         <table>
             <thead>
@@ -9,13 +9,34 @@
                     <th>PID</th>
                 </tr>
             </thead>
-                <tr *ngFor="let user of users">
-                    <td>{{ user.name}}</td>
-                    <td>{{ user.pid }}</td>
+                <tr *ngFor="let user of getUsers()">
+                    <td>{{ user.getName()}}</td>
+                    <td>{{ user.getPid() }}</td>
                 </tr>
             <tbody>
 
             </tbody>
         </table>
     </div>
+
+    <div class="stats-container">
+        <h2>Check-Ins</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>PID</th>
+                </tr>
+            </thead>
+                <tr *ngFor="let checkin of getCheckins()">
+                    <td>{{ checkin.time }}</td>
+                    <td>{{  checkin.name }}</td>
+                </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
 </div>

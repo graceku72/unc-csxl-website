@@ -1,10 +1,10 @@
 <div class="checkin-container">
     <div class="input-container">
         <h2 class="title">Check In</h2>
-        <form>
+        <form [formGroup]='checkoutForm' (ngSubmit)="onSubmit()">
             <label for="pid" class="label-style">PID</label>
-            <input type="number" id="pid" name="pid">
-            <button class="button-style" (click)="checkin()">Check In</button>
+            <input type="number" id="pid" name="pid" formControlName="pid">
+            <button class="button-style" type="submit">Check In</button>
         </form>
     </div>
 </div>
