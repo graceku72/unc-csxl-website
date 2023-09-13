@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { RegistrationService } from '../registration.service';
 import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { UserService } from '../user.service';
-import { last } from 'rxjs';
 import { Validators } from '@angular/forms';
 
 @Component({
@@ -32,6 +30,10 @@ export class RegistrationComponent {
   onSubmit(): void {
     const { firstName, lastName, pid } = this.checkoutForm.value;
     //it would not let me make new user without this validation 
+    if (String(pid).length !== 9) {
+      alert("Invalid PID!");
+      return;
+    }
     if (firstName !== null && firstName !== undefined &&
       lastName !== null && lastName !== undefined &&
       pid !== null && pid !== undefined) {
