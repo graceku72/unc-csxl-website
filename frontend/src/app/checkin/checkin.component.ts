@@ -28,16 +28,21 @@ export class CheckinComponent {
     const pid = this.checkoutForm.value.pid;
     console.log(pid);
 
-    if (pid !== null) {
+  
+    if (pid !== null && pid !== undefined) {
+      if (String(pid).length !== 9) { 
+        alert("PID should be 9 digits.");
+        return;
+      }
+
       const foundUser = this.userService.getUsers().find(user => user.getPid() === pid);
       if (foundUser) {
+        const userName = foundUser.getName();
         this.checkinService.addCheckin(foundUser.getName());
-        this.router.navigate(['/checkin-confirmation']);
+        this.router.navigate(['/checkin-confirmation', userName]);
+      } else {
+        alert("PID was not found.");
       }
     }
-  
-    
-
-    
   }
 }
