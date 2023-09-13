@@ -1,11 +1,10 @@
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .stats-container {
     width: 613px; 
-
     background-color: rgba(26, 44, 72, 0.64); 
     border-radius: 10px; 
     border: 0.25px solid #fafafa;

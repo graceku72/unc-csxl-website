@@ -17,9 +17,8 @@ export class CheckinComponent {
   constructor(
     private router: Router,
     private checkinService: CheckInService,
-    private userService: UserService,
     private formBuilder: FormBuilder
-    
+
     ) {
     
   }
@@ -35,7 +34,7 @@ export class CheckinComponent {
         return;
       }
 
-      const foundUser = this.userService.getUsers().find(user => user.getPid() === pid);
+      const foundUser = this.checkinService.getUsers().find(user => user.getPid() === pid);
       if (foundUser) {
         const userName = foundUser.getName();
         this.checkinService.addCheckin(foundUser.getName());

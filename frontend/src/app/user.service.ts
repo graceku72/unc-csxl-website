@@ -33,5 +33,6 @@ export class UserService {
 
   addUser(newUser: User): void {
     this.users.push(newUser);
+    this.users.sort((a, b) => a.getName().localeCompare(b.getName()));
   }
 }
