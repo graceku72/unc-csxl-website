@@ -41,7 +41,7 @@ import { CheckinConfirmationComponent } from './checkin-confirmation/checkin-con
       {path: 'confirmation', component: ConfirmationComponent},
       {path: 'stats', component: StatsComponent},
       {path: 'checkin', component: CheckinComponent},
-      {path: 'checkin-confirmation', component: CheckinConfirmationComponent},
+      {path: 'checkin-confirmation/:userName', component: CheckinConfirmationComponent},
     ]),
   ],
   providers: [],
