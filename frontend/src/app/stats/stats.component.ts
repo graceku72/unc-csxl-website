@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { dummyUsers } from '../dummy-data';
 import { UserService } from '../user.service';
 import { CheckInService } from '../check-in.service';
 
