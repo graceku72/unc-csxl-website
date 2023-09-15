@@ -10,10 +10,6 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  // firstName = this.registrationService.getFirstName();
-  // lastName = this.registrationService.getLastName();
-  // pid = this.registrationService.getPid();
-
   checkoutForm = this.formBuilder.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
@@ -29,7 +25,6 @@ export class RegistrationComponent {
 
   onSubmit(): void {
     const { firstName, lastName, pid } = this.checkoutForm.value;
-    //it would not let me make new user without this validation 
     if (String(pid).length !== 9) {
       alert("Invalid PID!");
       return;

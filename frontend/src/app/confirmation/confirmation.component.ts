@@ -21,11 +21,4 @@ export class ConfirmationComponent {
   getUserName() {
     return this.userService.getUser()?.getName();
   }
-  // ngOnInit(): void {
-  //   //const routeParams = this.route.snapshot.paramMap: const 
-  // }
-
-  // constructor(private router: Router) {
-    
-  // }
 }

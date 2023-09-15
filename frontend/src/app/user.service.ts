@@ -5,7 +5,7 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserService {
-  private user: User | null = null; // Initialize it as null
+  private user: User | null = null; 
   private users: User[] = [];
 
 
